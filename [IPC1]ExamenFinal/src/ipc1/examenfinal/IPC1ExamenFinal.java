@@ -7,7 +7,7 @@ import java.util.Scanner;
  * carné: 202100229
  */
 public class IPC1ExamenFinal {
-    static Scanner num1 = new Scanner(System.in);
+    static Scanner num = new Scanner(System.in);
     static Scanner num2 = new Scanner(System.in);
     static Scanner entrada = new Scanner(System.in);
 
@@ -45,17 +45,54 @@ public class IPC1ExamenFinal {
 
     static public void Ejercicio1(){
         System.out.println("-----------\nEjercicio 1\n-----------");
+        System.out.print("Ingrese el 1er número: ");
+        double numero1 = num.nextDouble();
+
+        System.out.print("Ingrese el 2do número: ");
+        double numero2 = num.nextDouble();
         
+        if(numero1 > numero2){
+            System.out.println("el número: " + numero1 + " es el mayor de ambos números");
+        }else{
+            System.out.println("el número: " + numero2 + " es el mayor de ambos números");
+        }
     }
     
-    static public void Ejercicio2(){
+    static public void Ejercicio2() {
         System.out.println("-----------\nEjercicio 2\n-----------");
-        
+        System.out.print("Ingrese un número impar: ");
+        int numero = num.nextInt();
+
+        if (esPar(numero) == 0) {
+            System.out.println("Unicamente ingresar números Impares");
+            Ejercicio2();
+        } else {
+            int columnas = numero;
+            for (int alto = 1; alto <= Math.ceil((float) columnas / 2); alto++) {
+                //Espacios en blanco
+                for (int blancos = 1; blancos <= columnas - alto; blancos++) {
+                    System.out.print(" ");
+                }
+                //Asteriscos
+                for (int asteriscos = 1; asteriscos <= (alto * 2) - 1; asteriscos++) {
+                    System.out.print("*");
+                }
+                System.out.println();
+            }
+        }
     }
-    
-    static public void Ejercicio3(){
+
+    public static int esPar(int numero) {
+        if (numero % 2 == 0) {
+            return 0;
+        } else {
+            return numero;
+        }
+    }
+
+    static public void Ejercicio3() {
         System.out.println("-----------\nEjercicio 3\n-----------");
-        
+
     }
-    
+
 }
