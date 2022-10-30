@@ -10,6 +10,8 @@ public class IPC1ExamenFinal {
     public static void main(String[] args) {
         System.out.println("hola mundo");
         System.out.println("kkkk");
+        System.out.println(""
+                + "jj");
         
     }
     
