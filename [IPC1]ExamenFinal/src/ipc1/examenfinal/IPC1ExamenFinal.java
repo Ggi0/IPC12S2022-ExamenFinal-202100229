@@ -94,6 +94,7 @@ public class IPC1ExamenFinal {
 
     static public void Ejercicio3() {
         System.out.println("-----------\nEjercicio 3\n-----------");
+        System.out.println(":c");
 
     }
 
