@@ -53,6 +53,8 @@ public class IPC1ExamenFinal {
         
         if(numero1 > numero2){
             System.out.println("el número: " + numero1 + " es el mayor de ambos números");
+        }else if(numero1 == numero2){
+            System.out.println("Ambos numeros valen lo mismo");
         }else{
             System.out.println("el número: " + numero2 + " es el mayor de ambos números");
         }
@@ -63,18 +65,18 @@ public class IPC1ExamenFinal {
         System.out.print("Ingrese un número impar: ");
         int numero = num.nextInt();
 
-        if (esPar(numero) == 0) {
-            System.out.println("Unicamente ingresar números Impares");
+        if (esPar(numero) <= 0) {
+            System.out.println("Unicamente ingresar números Impares positivos\n");
             Ejercicio2();
         } else {
             int columnas = numero;
-            for (int alto = 1; alto <= Math.ceil((float) columnas / 2); alto++) {
+            for (int i = 1; i <= Math.ceil((float) columnas / 2); i++) {
                 //Espacios en blanco
-                for (int blancos = 1; blancos <= columnas - alto; blancos++) {
+                for (int j = 1; j <= columnas - i; j++) {
                     System.out.print(" ");
                 }
                 //Asteriscos
-                for (int asteriscos = 1; asteriscos <= (alto * 2) - 1; asteriscos++) {
+                for (int j = 1; j <= (i * 2) - 1; j++) {
                     System.out.print("*");
                 }
                 System.out.println();
